@@ -23,6 +23,7 @@ export default function Home() {
             I&apos;m a software developer in Japan. I&apos;m also a FPS gamer. I like to play
             VALORANT.
           </p>
+          <p>This icon is my favorite singer &quot;miwa&quot;.</p>
           <p>If you have any questions, please contact me on Discord.</p>
         </div>
       </div>
