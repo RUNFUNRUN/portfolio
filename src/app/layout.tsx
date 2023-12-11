@@ -7,6 +7,7 @@ import './globals.css';
 const roboto = Roboto({ weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
   title: 'RUNFUNRUN Info',
   description: 'This is my portfolio site.',
   openGraph: {
