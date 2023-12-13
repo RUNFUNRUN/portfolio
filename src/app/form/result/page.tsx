@@ -9,13 +9,13 @@ const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
 
 export default function Home() {
   const searchParams = useSearchParams();
-  const success = searchParams.get('success') as boolean | null;
+  const success = searchParams.get('success') as string | undefined;
 
-  if (success === null) {
+  if (!success) {
     redirect('/');
   }
 
-  if (success) {
+  if (success === 'true') {
     return (
       <main>
         <h2 className={`text-4xl sm:text-6xl lg:text-8xl ${archivoBlack.className}`}>Success</h2>
