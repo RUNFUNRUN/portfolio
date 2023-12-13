@@ -2,6 +2,7 @@ import { Avatar } from '@nextui-org/react';
 import { Archivo_Black } from 'next/font/google';
 import { SocialMediaButton } from './_components/SocialMediaButton';
 import { CopyButton } from './_components/CopyButton';
+import Link from 'next/link';
 
 const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
 
@@ -24,7 +25,13 @@ export default function Home() {
             VALORANT.
           </p>
           <p>This icon is my favorite singer &quot;miwa&quot;.</p>
-          <p>If you have any questions, please contact me on Discord.</p>
+          <p>
+            If you have any questions, please contact me on Discord or{' '}
+            <Link href="/form" className="text-blue-400 underline">
+              this form
+            </Link>
+            .
+          </p>
         </div>
       </div>
       <div className="my-6 sm:my-12 lg:my-20">
