@@ -2,12 +2,13 @@ import { Avatar } from '@nextui-org/react';
 import { Archivo_Black } from 'next/font/google';
 import { SocialMediaButton } from './_components/SocialMediaButton';
 import { CopyButton } from './_components/CopyButton';
+import Link from 'next/link';
 
 const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <main className="text-center m-6 mx-10 sm:m-10 lg:m-16">
+    <main>
       <h1
         className={`text-4xl sm:text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-blue-500 to-indigo-500 ${archivoBlack.className}`}
       >
@@ -24,7 +25,13 @@ export default function Home() {
             VALORANT.
           </p>
           <p>This icon is my favorite singer &quot;miwa&quot;.</p>
-          <p>If you have any questions, please contact me on Discord.</p>
+          <p>
+            If you have any questions, please contact me on Discord or{' '}
+            <Link href="/form" className="text-blue-400 underline">
+              this form
+            </Link>
+            .
+          </p>
         </div>
       </div>
       <div className="my-6 sm:my-12 lg:my-20">
