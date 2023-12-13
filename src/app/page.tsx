@@ -7,7 +7,7 @@ const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <main className="text-center m-6 mx-10 sm:m-10 lg:m-16">
+    <main>
       <h1
         className={`text-4xl sm:text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-blue-500 to-indigo-500 ${archivoBlack.className}`}
       >
