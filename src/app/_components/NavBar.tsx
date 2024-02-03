@@ -32,6 +32,11 @@ export const NavBar = () => {
       url: '/form',
       className: pathname === '/form' ? 'text-green-400' : '',
     },
+    {
+      title: 'Blog',
+      url: 'https://www.runfunrun.tech',
+      className: '',
+    },
   ];
 
   return (
@@ -50,19 +55,19 @@ export const NavBar = () => {
             height={50}
             className="m-2"
           />
-          <p className={`text-3xl sm:text-4xl font-bold ${archivoBlack.className}`}>RUNFUNRUN</p>
+          <p className={`text-3xl sm:text-4xl font-bold ${archivoBlack.className}`}>
+            RUNFUNRUN.info
+          </p>
         </NavbarBrand>
         {menuItems.map((item, index) => (
-          <>
-            <NavbarItem key={`${item}-${index}`}>
-              <Link
-                className={`hidden lg:flex text-2xl ${archivoBlack.className} ${item.className}`}
-                href={item.url}
-              >
-                {item.title}
-              </Link>
-            </NavbarItem>
-          </>
+          <NavbarItem key={`${item}-${index}`}>
+            <Link
+              className={`hidden lg:flex text-2xl ${archivoBlack.className} ${item.className}`}
+              href={item.url}
+            >
+              {item.title}
+            </Link>
+          </NavbarItem>
         ))}
         <NavbarMenu>
           {menuItems.map((item, index) => (
