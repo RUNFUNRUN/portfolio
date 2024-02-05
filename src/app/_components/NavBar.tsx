@@ -55,7 +55,7 @@ export const NavBar = () => {
             height={50}
             className="m-2"
           />
-          <p className={`text-3xl sm:text-4xl font-bold ${archivoBlack.className}`}>
+          <p className={`text-2xl sm:text-4xl font-bold ${archivoBlack.className}`}>
             RUNFUNRUN.info
           </p>
         </NavbarBrand>
