@@ -6,11 +6,12 @@ type Props = {
   description?: string;
   image: string;
   url: string;
+  className?: string;
 };
 
-export const WorkCard = ({ title, description, image, url }: Props) => {
+export const WorkCard = ({ title, description, image, url, className }: Props) => {
   return (
-    <Card className="py-2 text-left md:w-[700px] md:mx-auto">
+    <Card className={`${className} py-2 text-left md:w-[700px] md:mx-auto`}>
       <Link href={url}>
         <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
           <h3 className="font-bold text-2xl">{title}</h3>

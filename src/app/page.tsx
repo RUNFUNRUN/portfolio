@@ -36,40 +36,42 @@ export default function Home() {
         </div>
       </div>
       <div className="my-6 sm:my-12 lg:my-20">
-        <h2 className={`text-3xl sm:text-4xl lg:text-5xl ${archivoBlack.className}`}>
+        <h2
+          className={`text-3xl sm:text-4xl lg:text-5xl sm:my-6 lg:my-10 ${archivoBlack.className}`}
+        >
           Social Media
         </h2>
-      </div>
-      <div className="sm:w-2/3 lg:w-2/5 sm:mx-auto sm:grid sm:grid-cols-4">
-        <SocialMediaButton
-          title="GitHub"
-          description="RUNFUNRUN"
-          icon="/github.png"
-          url="https://github.com/RUNFUNRUN"
-          className="bg-gray-800 sm:col-span-1 my-4 sm:my-0 sm:mx-auto"
-        />
-        <CopyButton
-          title="Discord"
-          description="runfunrun"
-          icon="/discord.png"
-          text="runfunrun"
-          message="Discord ID is Copied!"
-          className="bg-indigo-400 sm:col-span-1 my-4 sm:my-0 sm:mx-auto"
-        />
-        <SocialMediaButton
-          title="X"
-          description="@GRAPH_fps"
-          icon="/x.png"
-          url="https://x.com/GRAPH_fps"
-          className="bg-blue-500 sm:col-span-1 my-4 sm:my-0 sm:mx-auto"
-        />
-        <SocialMediaButton
-          title="Instagram"
-          description="@ryota_uchiyama"
-          icon="/instagram.png"
-          url="https://www.instagram.com/ryota_uchiyama"
-          className="bg-pink-300 sm:col-span-1 my-4 sm:my-0 sm:mx-auto"
-        />
+        <div className="sm:w-2/3 xl:w-2/5 sm:mx-auto sm:grid sm:grid-cols-4">
+          <SocialMediaButton
+            title="GitHub"
+            description="RUNFUNRUN"
+            icon="/github.png"
+            url="https://github.com/RUNFUNRUN"
+            className="bg-gray-800 sm:col-span-1 my-3 sm:my-0 sm:mx-auto"
+          />
+          <CopyButton
+            title="Discord"
+            description="runfunrun"
+            icon="/discord.png"
+            text="runfunrun"
+            message="Discord ID is Copied!"
+            className="bg-indigo-400 sm:col-span-1 my-3 sm:my-0 sm:mx-auto"
+          />
+          <SocialMediaButton
+            title="X"
+            description="@GRAPH_fps"
+            icon="/x.png"
+            url="https://x.com/GRAPH_fps"
+            className="bg-blue-500 sm:col-span-1 my-3 sm:my-0 sm:mx-auto"
+          />
+          <SocialMediaButton
+            title="Instagram"
+            description="@ryota_uchiyama"
+            icon="/instagram.png"
+            url="https://www.instagram.com/ryota_uchiyama"
+            className="bg-pink-300 sm:col-span-1 my-3 sm:my-0 sm:mx-auto"
+          />
+        </div>
       </div>
       <div className="my-6 sm:my-12 lg:my-20">
         <h2
