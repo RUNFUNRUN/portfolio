@@ -28,9 +28,9 @@ export const NavBar = () => {
       className: pathname === '/' ? 'text-green-400' : '',
     },
     {
-      title: 'Contact form',
-      url: '/form',
-      className: pathname === '/form' ? 'text-green-400' : '',
+      title: 'Contact',
+      url: '/contact',
+      className: pathname === '/contact' ? 'text-green-400' : '',
     },
     {
       title: 'Blog',

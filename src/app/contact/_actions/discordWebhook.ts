@@ -30,7 +30,7 @@ export const discordWebhook = async (formData: FormData) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        username: 'Contact Form',
+        username: 'Contact',
         content: email
           ? 'name: ' + name + '\n' + 'email: ' + email + '\n```\n' + content + '\n```'
           : 'name: ' + name + '\n' + '```\n' + content + '\n```',
@@ -44,7 +44,7 @@ export const discordWebhook = async (formData: FormData) => {
       console.error('Unexpected error:', err);
     }
     console.log('Discord webhook failed');
-    redirect('/form/result?success=false');
+    redirect('/contact/result?success=false');
   }
-  redirect('/form/result?success=true');
+  redirect('/contact/result?success=true');
 };
