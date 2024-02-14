@@ -49,7 +49,11 @@ export const CopyButton = ({ title, description, icon, text, message, className 
           isIconOnly={isMobile}
           startContent={<Image src={icon} alt={`${title} logo`} priority width={50} height={50} />}
         >
-          {isMobile ? null : <span className="w-full text-2xl">{description}</span>}
+          {isMobile ? null : (
+            <div className="w-full flex">
+              <span className="text-2xl ml-6">{description}</span>
+            </div>
+          )}
         </Button>
       </PopoverTrigger>
       <PopoverContent>
