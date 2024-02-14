@@ -41,11 +41,9 @@ export const SocialMediaButton = ({ title, description, icon, url, className }: 
       isIconOnly={isMobile}
       startContent={<Image src={icon} alt={`${title} logo`} priority width={50} height={50} />}
     >
-      {isMobile ? null : (
-        <div className="w-full flex">
-          <span className="text-2xl ml-6">{description}</span>
-        </div>
-      )}
+      <div className="w-full flex sm:hidden">
+        <span className="text-2xl ml-6">{description}</span>
+      </div>
     </Button>
   );
 };

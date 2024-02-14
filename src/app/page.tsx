@@ -3,6 +3,7 @@ import { Archivo_Black } from 'next/font/google';
 import { SocialMediaButton } from './_components/SocialMediaButton';
 import { CopyButton } from './_components/CopyButton';
 import Link from 'next/link';
+import { WorkCard } from './_components/WorkCard';
 
 const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
 
@@ -69,6 +70,21 @@ export default function Home() {
           url="https://www.instagram.com/ryota_uchiyama"
           className="bg-pink-300 sm:col-span-1 my-4 sm:my-0 sm:mx-auto"
         />
+      </div>
+      <div className="my-6 sm:my-12 lg:my-20">
+        <h2
+          className={`text-3xl sm:text-4xl lg:text-5xl my-3 sm:my-6 lg:my-10 ${archivoBlack.className}`}
+        >
+          My works
+        </h2>
+        <div>
+          <WorkCard
+            title="VALORANT Oekaki Chat"
+            description='VALORANT ASCII art generator | "Oekaki" means "drawing" in Japanese.'
+            image="https://www.valorant-oekaki-chat.net/og.png"
+            url="https://www.valorant-oekaki-chat.net"
+          />
+        </div>
       </div>
     </main>
   );
