@@ -82,6 +82,7 @@ export default function Home() {
             description='VALORANT ASCII art generator | "Oekaki" means "drawing" in Japanese.'
             image="https://www.valorant-oekaki-chat.net/og.png"
             url="https://www.valorant-oekaki-chat.net"
+            github="https://github.com/RUNFUNRUN/VALORANT-Oekaki-Chat"
           />
         </div>
       </div>
