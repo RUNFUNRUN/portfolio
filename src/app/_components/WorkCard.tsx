@@ -38,7 +38,7 @@ export const WorkCard = ({ title, description, image, url, github, className }: 
         )}
       </CardHeader>
       <CardBody className="overflow-visible py-2">
-        <Link href={url ?? github ?? 'https://runfun.run'}>
+        <Link href={url ?? github ?? 'https://www.runfunrun.info/notfound'}>
           <Image
             alt="Card background"
             className="object-cover rounded-xl"
