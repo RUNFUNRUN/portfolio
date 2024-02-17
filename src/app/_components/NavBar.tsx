@@ -47,17 +47,19 @@ export const NavBar = () => {
           className="lg:hidden"
         />
         <NavbarBrand>
-          <Image
-            src="/favicon.ico"
-            alt="miwa-icon"
-            priority
-            width={50}
-            height={50}
-            className="m-2"
-          />
-          <p className={`text-2xl sm:text-4xl font-bold ${archivoBlack.className}`}>
-            RUNFUNRUN.info
-          </p>
+          <Link href="/" className="flex">
+            <Image
+              src="/favicon.ico"
+              alt="miwa-icon"
+              priority
+              width={50}
+              height={50}
+              className="mx-2 hidden sm:block"
+            />
+            <p className={`text-2xl sm:text-4xl font-bold my-auto ${archivoBlack.className}`}>
+              RUNFUNRUN.info
+            </p>
+          </Link>
         </NavbarBrand>
         {menuItems.map((item, index) => (
           <NavbarItem key={`${item}-${index}`}>
