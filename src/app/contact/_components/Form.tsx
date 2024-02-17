@@ -1,9 +1,14 @@
+'use client';
+
 import { Button, Input, Textarea } from '@nextui-org/react';
 import { discordWebhook } from '../_actions/discordWebhook';
+import { useState } from 'react';
 
 export const Form = () => {
+  const [loading, setLoading] = useState(false);
+
   return (
-    <form className="test-center" action={discordWebhook}>
+    <form className="test-center" action={discordWebhook} onSubmit={() => setLoading(true)}>
       <Input
         isRequired
         size="lg"
@@ -37,8 +42,9 @@ export const Form = () => {
         radius="full"
         size="lg"
         className="my-3 sm:my-6 lg:my-9 w-40"
+        isLoading={loading}
       >
-        Send
+        {loading ? '' : 'Submit'}
       </Button>
     </form>
   );
