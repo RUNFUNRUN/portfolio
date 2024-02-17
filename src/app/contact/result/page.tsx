@@ -11,7 +11,7 @@ export default function Home() {
   const searchParams = useSearchParams();
   const success = searchParams.get('success') as string | undefined;
 
-  if (!success) {
+  if (success === undefined) {
     redirect('/');
   }
 
