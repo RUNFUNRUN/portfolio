@@ -44,17 +44,17 @@ export const NavBar = () => {
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          className="lg:hidden"
+          className='lg:hidden'
         />
         <NavbarBrand>
-          <Link href="/" className="flex">
+          <Link href='/' className='flex'>
             <Image
-              src="/favicon.ico"
-              alt="miwa-icon"
+              src='/favicon.ico'
+              alt='miwa-icon'
               priority
               width={50}
               height={50}
-              className="mx-2 hidden sm:block"
+              className='mx-2 hidden sm:block'
             />
             <p className={`text-2xl sm:text-4xl font-bold my-auto ${archivoBlack.className}`}>
               RUNFUNRUN.info

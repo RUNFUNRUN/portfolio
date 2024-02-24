@@ -40,25 +40,25 @@ export const CopyButton = ({ title, description, icon, text, message, className 
   };
 
   return (
-    <Popover placement="top" showArrow={true} isOpen={isOpen}>
+    <Popover placement='top' showArrow={true} isOpen={isOpen}>
       <PopoverTrigger>
         <Button
-          radius="full"
+          radius='full'
           className={`${className} w-full sm:w-20 h-16 sm:h-20`}
           onClick={handleClick}
           isIconOnly={isMobile}
           startContent={<Image src={icon} alt={`${title} logo`} priority width={50} height={50} />}
         >
           {isMobile ? null : (
-            <div className="w-full flex">
-              <span className="text-2xl ml-6">{description}</span>
+            <div className='w-full flex'>
+              <span className='text-2xl ml-6'>{description}</span>
             </div>
           )}
         </Button>
       </PopoverTrigger>
       <PopoverContent>
-        <div className="px-1 py-2">
-          <div className="text-small">{message}</div>
+        <div className='px-1 py-2'>
+          <div className='text-small'>{message}</div>
         </div>
       </PopoverContent>
     </Popover>

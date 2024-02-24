@@ -13,14 +13,14 @@ type Props = {
 export const WorkCard = ({ title, description, image, url, github, className }: Props) => {
   return (
     <Card className={`${className} py-2 text-left md:w-[700px] md:mx-auto`}>
-      <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-        <h3 className="font-bold text-2xl">{title}</h3>
-        <h4 className="my-2">{description}</h4>
+      <CardHeader className='pb-0 pt-2 px-4 flex-col items-start'>
+        <h3 className='font-bold text-2xl'>{title}</h3>
+        <h4 className='my-2'>{description}</h4>
         {url && (
           <>
             <p>URL</p>
             <p>
-              <Link href={url} className="hover:underline">
+              <Link href={url} className='hover:underline'>
                 {url}
               </Link>
             </p>
@@ -30,18 +30,18 @@ export const WorkCard = ({ title, description, image, url, github, className }: 
           <>
             <p>GitHub</p>
             <p>
-              <Link href={github} className="hover:underline">
+              <Link href={github} className='hover:underline'>
                 {github}
               </Link>
             </p>
           </>
         )}
       </CardHeader>
-      <CardBody className="overflow-visible py-2">
+      <CardBody className='overflow-visible py-2'>
         <Link href={url ?? github ?? 'https://www.runfunrun.info/notfound'}>
           <Image
-            alt="Card background"
-            className="object-cover rounded-xl"
+            alt='Card background'
+            className='object-cover rounded-xl'
             src={image}
             width={1000}
           />

@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <h1 className={`text-3xl sm:text-4xl lg:text-5xl ${archivoBlack.className}`}>Contact</h1>
-      <div className="my-6 sm:my-8 lg:my-10 mx-0 sm:mx-auto">
+      <div className='my-6 sm:my-8 lg:my-10 mx-0 sm:mx-auto'>
         <Form />
       </div>
     </main>

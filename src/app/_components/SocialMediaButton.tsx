@@ -35,14 +35,14 @@ export const SocialMediaButton = ({ title, description, icon, url, className }: 
 
   return (
     <Button
-      radius="full"
+      radius='full'
       className={`${className} w-full sm:w-20 h-16 sm:h-20`}
       onClick={handleClick}
       isIconOnly={isMobile}
       startContent={<Image src={icon} alt={`${title} logo`} priority width={50} height={50} />}
     >
-      <div className="w-full flex sm:hidden">
-        <span className="text-2xl ml-6">{description}</span>
+      <div className='w-full flex sm:hidden'>
+        <span className='text-2xl ml-6'>{description}</span>
       </div>
     </Button>
   );
