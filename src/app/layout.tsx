@@ -4,7 +4,6 @@ import { Roboto } from 'next/font/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Providers } from './providers';
 import './globals.css';
-import { NavBar } from './_components/NavBar';
 
 const roboto = Roboto({ weight: '400', subsets: ['latin'] });
 
@@ -28,12 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       )}
       <SpeedInsights />
       <body className={roboto.className}>
-        <Providers>
-          <NavBar />
-          <div className='text-center mx-10 sm:mx-10 lg:mx-16 my-3 sm:my-8 lg:my-10'>
-            {children}
-          </div>
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

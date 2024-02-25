@@ -4,6 +4,7 @@ import { redirect, useSearchParams } from 'next/navigation';
 import { Archivo_Black } from 'next/font/google';
 import Link from 'next/link';
 import { Button } from '@nextui-org/react';
+import { NavBar } from '@/app/_components/NavBar';
 
 const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
 
@@ -18,13 +19,16 @@ export default function Home() {
   if (success === 'true') {
     return (
       <main>
-        <h2 className={`text-4xl sm:text-6xl lg:text-8xl ${archivoBlack.className}`}>Success</h2>
-        <p className='text-sm sm:text-xl lg:text-2xl'>You successfully sent a message!</p>
-        <Link href='/'>
-          <Button color='secondary' size='lg' className='my-3 sm:my-6 lg:my-9 w-40'>
-            Back to Home
-          </Button>
-        </Link>
+        <NavBar />
+        <div className='text-center mx-10 sm:mx-10 lg:mx-16 my-3 sm:my-8 lg:my-10'>
+          <h2 className={`text-4xl sm:text-6xl lg:text-8xl ${archivoBlack.className}`}>Success</h2>
+          <p className='text-sm sm:text-xl lg:text-2xl'>You successfully sent a message!</p>
+          <Link href='/'>
+            <Button color='secondary' size='lg' className='my-3 sm:my-6 lg:my-9 w-40'>
+              Back to Home
+            </Button>
+          </Link>
+        </div>
       </main>
     );
   }
