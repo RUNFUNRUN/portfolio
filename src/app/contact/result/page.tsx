@@ -8,6 +8,30 @@ import { NavBar } from '@/app/_components/NavBar';
 
 const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
 
+const Result = ({ success }: { success: boolean }) => {
+  if (success) {
+    return (
+      <>
+        <h2 className={`text-4xl sm:text-6xl lg:text-8xl text-green-300 ${archivoBlack.className}`}>
+          Success
+        </h2>
+        <p className='text-sm sm:text-xl lg:text-2xl'>You successfully sent a message!</p>
+      </>
+    );
+  }
+
+  return (
+    <>
+      <h2 className={`text-4xl sm:text-6xl lg:text-8xl text-red-500 ${archivoBlack.className}`}>
+        Error
+      </h2>
+      <p className='text-sm sm:text-xl lg:text-2xl'>
+        You failed to send a message. Please contact me directly on Discord.
+      </p>
+    </>
+  );
+};
+
 export default function Home() {
   const searchParams = useSearchParams();
   const success = searchParams.get('success') as string | undefined;
@@ -16,34 +40,17 @@ export default function Home() {
     redirect('/');
   }
 
-  if (success === 'true') {
-    return (
-      <main>
-        <NavBar />
-        <div className='text-center mx-10 sm:mx-10 lg:mx-16 my-3 sm:my-8 lg:my-10'>
-          <h2 className={`text-4xl sm:text-6xl lg:text-8xl ${archivoBlack.className}`}>Success</h2>
-          <p className='text-sm sm:text-xl lg:text-2xl'>You successfully sent a message!</p>
-          <Link href='/'>
-            <Button color='secondary' size='lg' className='my-3 sm:my-6 lg:my-9 w-40'>
-              Back to Home
-            </Button>
-          </Link>
-        </div>
-      </main>
-    );
-  }
-
   return (
     <main>
-      <h2 className={`text-4xl sm:text-6xl lg:text-8xl ${archivoBlack.className}`}>Error</h2>
-      <p className='text-sm sm:text-xl lg:text-2xl'>
-        You failed to send a message. Please contact me directly on Discord.
-      </p>
-      <Link href='/'>
-        <Button color='danger' size='lg' className='my-3 sm:my-6 lg:my-9 w-40'>
-          Back to Home
-        </Button>
-      </Link>
+      <NavBar />
+      <div className='text-center mx-10 sm:mx-10 lg:mx-16 my-3 sm:my-8 lg:my-10'>
+        <Result success={success === 'true'} />
+        <Link href='/'>
+          <Button color='secondary' size='lg' className='my-3 sm:my-6 lg:my-9 w-40'>
+            Back to Home
+          </Button>
+        </Link>
+      </div>
     </main>
   );
 }
