@@ -36,6 +36,7 @@ export const NavBar = () => {
       title: 'Blog',
       url: 'https://www.runfunrun.tech',
       className: '',
+      blank: true,
     },
   ];
 
@@ -66,6 +67,7 @@ export const NavBar = () => {
             <Link
               className={`hidden lg:flex text-2xl ${archivoBlack.className} ${item.className}`}
               href={item.url}
+              target={item.blank ? '_blank' : ''}
             >
               {item.title}
             </Link>
@@ -77,6 +79,7 @@ export const NavBar = () => {
               <Link
                 className={`w-full text-2xl ${archivoBlack.className} ${item.className}`}
                 href={item.url}
+                target={item.blank ? '_blank' : ''}
               >
                 {item.title}
               </Link>

@@ -4,7 +4,6 @@ import { redirect, useSearchParams } from 'next/navigation';
 import { Archivo_Black } from 'next/font/google';
 import Link from 'next/link';
 import { Button } from '@nextui-org/react';
-import { NavBar } from '@/app/_components/NavBar';
 
 const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
 
@@ -42,15 +41,12 @@ export default function Home() {
 
   return (
     <main>
-      <NavBar />
-      <div className='text-center mx-10 sm:mx-10 lg:mx-16 my-3 sm:my-8 lg:my-10'>
-        <Result success={success === 'true'} />
-        <Link href='/'>
-          <Button color='secondary' size='lg' className='my-3 sm:my-6 lg:my-9 w-40'>
-            Back to Home
-          </Button>
-        </Link>
-      </div>
+      <Result success={success === 'true'} />
+      <Link href='/'>
+        <Button color='secondary' size='lg' className='my-3 sm:my-6 lg:my-9 w-40'>
+          Back to Home
+        </Button>
+      </Link>
     </main>
   );
 }
