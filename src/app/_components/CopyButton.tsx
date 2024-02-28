@@ -51,7 +51,7 @@ export const CopyButton = ({ title, description, icon, text, message, className 
         >
           {isMobile ? null : (
             <div className='w-full flex'>
-              <span className='text-2xl ml-6'>{description}</span>
+              <span className='text-2xl ml-3'>{description}</span>
             </div>
           )}
         </Button>

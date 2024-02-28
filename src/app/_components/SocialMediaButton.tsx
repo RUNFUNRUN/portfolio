@@ -42,7 +42,7 @@ export const SocialMediaButton = ({ title, description, icon, url, className }: 
       startContent={<Image src={icon} alt={`${title} logo`} priority width={50} height={50} />}
     >
       <div className='w-full flex sm:hidden'>
-        <span className='text-2xl ml-6'>{description}</span>
+        <span className='text-2xl ml-3'>{description}</span>
       </div>
     </Button>
   );

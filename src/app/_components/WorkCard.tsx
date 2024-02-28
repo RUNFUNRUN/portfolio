@@ -20,7 +20,7 @@ export const WorkCard = ({ title, description, image, url, github, className }: 
           <>
             <p>URL</p>
             <p>
-              <Link href={url} className='hover:underline'>
+              <Link href={url} className='[overflow-wrap:anywhere] hover:underline'>
                 {url}
               </Link>
             </p>
@@ -30,7 +30,7 @@ export const WorkCard = ({ title, description, image, url, github, className }: 
           <>
             <p>GitHub</p>
             <p>
-              <Link href={github} className='hover:underline'>
+              <Link href={github} className='[overflow-wrap:anywhere] hover:underline'>
                 {github}
               </Link>
             </p>
