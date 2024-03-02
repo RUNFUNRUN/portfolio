@@ -25,7 +25,7 @@ export default function Home() {
           <p>This icon is my favorite singer &quot;miwa&quot;.</p>
           <p>
             If you have any questions, please contact me on Discord or{' '}
-            <Link href='/form' className='text-blue-500 hover:underline hover:text-blue-400'>
+            <Link href='/contact' className='text-blue-500 hover:underline hover:text-blue-400'>
               this form
             </Link>
             .
