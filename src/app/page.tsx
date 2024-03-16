@@ -19,7 +19,7 @@ export default function Home() {
         <div className='w-1/2 sm:w-auto sm:col-span-1 mx-auto my-auto'>
           <Avatar src='miwa_icon.jpeg' className='w-auto h-auto text-large' />
         </div>
-        <div className='text-left text-lg sm:col-span-2 lg:col-span-3 sm:text-2xl lg:text-4xl m-6 sm:m-10 lg:m-16'>
+        <div className='text-left text-lg sm:col-span-2 lg:col-span-3 sm:text-2xl lg:text-4xl my-6 sm:m-10 lg:m-16'>
           <p>Hello. I&apos;m Ryota Uchiyama a.k.a RUNFUNRUN.</p>
           <p>I&apos;m a software developer in Japan. I&apos;m also a FPS gamer. I like VALORANT.</p>
           <p>This icon is my favorite singer &quot;miwa&quot;.</p>
