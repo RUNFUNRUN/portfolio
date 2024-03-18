@@ -1,8 +1,8 @@
 import { Avatar } from '@nextui-org/react';
 import { Archivo_Black } from 'next/font/google';
-import { SocialMediaButton } from './_components/SocialMediaButton';
-import { CopyButton } from './_components/CopyButton';
 import Link from 'next/link';
+import { CopyButton } from './_components/CopyButton';
+import { SocialMediaButton } from './_components/SocialMediaButton';
 import { WorkCard } from './_components/WorkCard';
 
 const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
@@ -21,11 +21,17 @@ export default function Home() {
         </div>
         <div className='text-left text-lg sm:col-span-2 lg:col-span-3 sm:text-2xl lg:text-4xl my-6 sm:m-10 lg:m-16'>
           <p>Hello. I&apos;m Ryota Uchiyama a.k.a RUNFUNRUN.</p>
-          <p>I&apos;m a software developer in Japan. I&apos;m also a FPS gamer. I like VALORANT.</p>
+          <p>
+            I&apos;m a software developer in Japan. I&apos;m also a FPS gamer. I
+            like VALORANT.
+          </p>
           <p>This icon is my favorite singer &quot;miwa&quot;.</p>
           <p>
             If you have any questions, please contact me on Discord or{' '}
-            <Link href='/contact' className='text-blue-500 hover:underline hover:text-blue-400'>
+            <Link
+              href='/contact'
+              className='text-blue-500 hover:underline hover:text-blue-400'
+            >
               this form
             </Link>
             .

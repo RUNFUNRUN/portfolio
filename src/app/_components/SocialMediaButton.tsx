@@ -1,7 +1,7 @@
 'use client';
 
-import Image from 'next/image';
 import { Button } from '@nextui-org/react';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 type Props = {
@@ -12,7 +12,13 @@ type Props = {
   className?: string;
 };
 
-export const SocialMediaButton = ({ title, description, icon, url, className }: Props) => {
+export const SocialMediaButton = ({
+  title,
+  description,
+  icon,
+  url,
+  className,
+}: Props) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -39,7 +45,15 @@ export const SocialMediaButton = ({ title, description, icon, url, className }: 
       className={`${className} w-full sm:w-20 h-16 sm:h-20`}
       onClick={handleClick}
       isIconOnly={isMobile}
-      startContent={<Image src={icon} alt={`${title} logo`} priority width={50} height={50} />}
+      startContent={
+        <Image
+          src={icon}
+          alt={`${title} logo`}
+          priority
+          width={50}
+          height={50}
+        />
+      }
     >
       <div className='w-full flex sm:hidden'>
         <span className='text-2xl ml-3'>{description}</span>

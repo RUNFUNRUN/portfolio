@@ -1,10 +1,5 @@
 'use client';
 
-import { useState } from 'react';
-import { usePathname } from 'next/navigation';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Archivo_Black } from 'next/font/google';
 import {
   Navbar,
   NavbarBrand,
@@ -14,6 +9,11 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from '@nextui-org/react';
+import { Archivo_Black } from 'next/font/google';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
 
@@ -57,13 +57,15 @@ export const NavBar = () => {
               height={50}
               className='mx-2 hidden sm:block'
             />
-            <p className={`text-2xl sm:text-4xl font-bold my-auto ${archivoBlack.className}`}>
+            <p
+              className={`text-2xl sm:text-4xl font-bold my-auto ${archivoBlack.className}`}
+            >
               RUNFUNRUN.info
             </p>
           </Link>
         </NavbarBrand>
-        {menuItems.map((item, index) => (
-          <NavbarItem key={`${item}-${index}`}>
+        {menuItems.map((item) => (
+          <NavbarItem key={item.url}>
             <Link
               className={`hidden lg:flex text-2xl ${archivoBlack.className} ${item.className}`}
               href={item.url}
@@ -74,8 +76,8 @@ export const NavBar = () => {
           </NavbarItem>
         ))}
         <NavbarMenu>
-          {menuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
+          {menuItems.map((item) => (
+            <NavbarMenuItem key={item.url}>
               <Link
                 className={`w-full text-2xl ${archivoBlack.className} ${item.className}`}
                 href={item.url}

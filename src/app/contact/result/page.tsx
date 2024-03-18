@@ -1,9 +1,9 @@
 'use client';
 
-import { redirect, useSearchParams } from 'next/navigation';
+import { Button } from '@nextui-org/react';
 import { Archivo_Black } from 'next/font/google';
 import Link from 'next/link';
-import { Button } from '@nextui-org/react';
+import { redirect, useSearchParams } from 'next/navigation';
 
 const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
 
@@ -11,17 +11,23 @@ const Result = ({ success }: { success: boolean }) => {
   if (success) {
     return (
       <>
-        <h2 className={`text-4xl sm:text-6xl lg:text-8xl text-green-300 ${archivoBlack.className}`}>
+        <h2
+          className={`text-4xl sm:text-6xl lg:text-8xl text-green-300 ${archivoBlack.className}`}
+        >
           Success
         </h2>
-        <p className='text-sm sm:text-xl lg:text-2xl'>You successfully sent a message!</p>
+        <p className='text-sm sm:text-xl lg:text-2xl'>
+          You successfully sent a message!
+        </p>
       </>
     );
   }
 
   return (
     <>
-      <h2 className={`text-4xl sm:text-6xl lg:text-8xl text-red-500 ${archivoBlack.className}`}>
+      <h2
+        className={`text-4xl sm:text-6xl lg:text-8xl text-red-500 ${archivoBlack.className}`}
+      >
         Error
       </h2>
       <p className='text-sm sm:text-xl lg:text-2xl'>
@@ -43,7 +49,11 @@ export default function Home() {
     <main>
       <Result success={success === 'true'} />
       <Link href='/'>
-        <Button color='secondary' size='lg' className='my-3 sm:my-6 lg:my-9 w-40'>
+        <Button
+          color='secondary'
+          size='lg'
+          className='my-3 sm:my-6 lg:my-9 w-40'
+        >
           Back to Home
         </Button>
       </Link>

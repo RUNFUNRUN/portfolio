@@ -1,7 +1,12 @@
 'use client';
 
+import {
+  Button,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@nextui-org/react';
 import Image from 'next/image';
-import { Popover, PopoverTrigger, PopoverContent, Button } from '@nextui-org/react';
 import { useEffect, useState } from 'react';
 
 type Props = {
@@ -13,7 +18,14 @@ type Props = {
   className?: string;
 };
 
-export const CopyButton = ({ title, description, icon, text, message, className }: Props) => {
+export const CopyButton = ({
+  title,
+  description,
+  icon,
+  text,
+  message,
+  className,
+}: Props) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -47,7 +59,15 @@ export const CopyButton = ({ title, description, icon, text, message, className 
           className={`${className} w-full sm:w-20 h-16 sm:h-20`}
           onClick={handleClick}
           isIconOnly={isMobile}
-          startContent={<Image src={icon} alt={`${title} logo`} priority width={50} height={50} />}
+          startContent={
+            <Image
+              src={icon}
+              alt={`${title} logo`}
+              priority
+              width={50}
+              height={50}
+            />
+          }
         >
           {isMobile ? null : (
             <div className='w-full flex'>

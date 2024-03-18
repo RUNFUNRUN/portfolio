@@ -22,7 +22,9 @@ export const discordWebhook = async (formData: FormData) => {
     if (!process.env.DISCORD_WEBHOOK_URL) {
       throw new Error('DISCORD_WEBHOOK_URL is not defined');
     }
-    const { name, email, content } = schema.parse(Object.fromEntries(formData.entries()));
+    const { name, email, content } = schema.parse(
+      Object.fromEntries(formData.entries()),
+    );
 
     await fetch(process.env.DISCORD_WEBHOOK_URL as string, {
       method: 'POST',
@@ -32,8 +34,8 @@ export const discordWebhook = async (formData: FormData) => {
       body: JSON.stringify({
         username: 'Contact',
         content: email
-          ? 'name: ' + name + '\n' + 'email: ' + email + '\n```\n' + content + '\n```'
-          : 'name: ' + name + '\n' + '```\n' + content + '\n```',
+          ? `name: ${name}\nemail: ${email}\n\`\`\`\n${content}\n\`\`\``
+          : `name: ${name}\n\`\`\`\n${content}\n\`\`\``,
       }),
     });
     console.log('Discord webhook sent');
