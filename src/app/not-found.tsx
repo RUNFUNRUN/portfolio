@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
 
-export default function NotFound() {
+const NotFound = () => {
   return (
     <main className='text-center'>
       <h2
@@ -32,4 +32,6 @@ export default function NotFound() {
       </Link>
     </main>
   );
-}
+};
+
+export default NotFound;

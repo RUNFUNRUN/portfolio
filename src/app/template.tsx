@@ -1,6 +1,6 @@
 import { NavBar } from './_components/NavBar';
 
-export default function Template({ children }: { children: React.ReactNode }) {
+const Template = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <NavBar />
@@ -9,4 +9,6 @@ export default function Template({ children }: { children: React.ReactNode }) {
       </div>
     </>
   );
-}
+};
+
+export default Template;

@@ -7,6 +7,22 @@ import { Providers } from './providers';
 
 const roboto = Roboto({ weight: '400', subsets: ['latin'] });
 
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <html lang='en' className='dark'>
+      {process.env.NODE_ENV === 'production' && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ''} />
+      )}
+      <SpeedInsights />
+      <body className={roboto.className}>
+        <Providers>{children}</Providers>
+      </body>
+    </html>
+  );
+};
+
+export default RootLayout;
+
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
@@ -20,19 +36,3 @@ export const metadata: Metadata = {
     images: '/miwa.jpeg',
   },
 };
-
-export default function RootLayout({
-  children,
-}: { children: React.ReactNode }) {
-  return (
-    <html lang='en' className='dark'>
-      {process.env.NODE_ENV === 'production' && (
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ''} />
-      )}
-      <SpeedInsights />
-      <body className={roboto.className}>
-        <Providers>{children}</Providers>
-      </body>
-    </html>
-  );
-}

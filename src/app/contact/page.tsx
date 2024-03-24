@@ -3,7 +3,7 @@ import { Form } from './_components/Form';
 
 const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
 
-export default function Home() {
+const Home = () => {
   return (
     <main>
       <h1
@@ -16,4 +16,6 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default Home;

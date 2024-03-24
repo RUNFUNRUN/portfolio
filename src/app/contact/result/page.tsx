@@ -37,7 +37,7 @@ const Result = ({ success }: { success: boolean }) => {
   );
 };
 
-export default function Home() {
+const Home = () => {
   const searchParams = useSearchParams();
   const success = searchParams.get('success') as string | undefined;
 
@@ -59,4 +59,6 @@ export default function Home() {
       </Link>
     </main>
   );
-}
+};
+
+export default Home;
