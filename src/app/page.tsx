@@ -1,9 +1,9 @@
 import { Avatar } from '@nextui-org/react';
 import { Archivo_Black } from 'next/font/google';
 import Link from 'next/link';
-import { CopyButton } from './_components/CopyButton';
-import { SocialMediaButton } from './_components/SocialMediaButton';
-import { WorkCard } from './_components/WorkCard';
+import { CopyButton } from './_components/copy-button';
+import { SocialMediaButton } from './_components/socialmedia-button';
+import { WorkCard } from './_components/work-card';
 
 const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
 

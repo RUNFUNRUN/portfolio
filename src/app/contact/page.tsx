@@ -1,5 +1,5 @@
 import { Archivo_Black } from 'next/font/google';
-import { Form } from './_components/Form';
+import { Form } from './_components/form';
 
 const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
 
