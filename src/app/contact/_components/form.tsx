@@ -2,7 +2,7 @@
 
 import { Button, Input, Textarea } from '@nextui-org/react';
 import { useState } from 'react';
-import { discordWebhook } from '../_actions/discordWebhook';
+import { discordWebhook } from '../_actions/discord-webhook';
 
 export const Form = () => {
   const [loading, setLoading] = useState(false);
