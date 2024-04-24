@@ -52,13 +52,12 @@ const Home = () => {
             url='https://github.com/RUNFUNRUN'
             className='bg-gray-800 sm:col-span-1 my-3 sm:my-0 sm:mx-auto'
           />
-          <CopyButton
+          <SocialMediaButton
             title='Discord'
             description='runfunrun'
             icon='/discord.png'
-            text='runfunrun'
-            message='Discord ID is Copied!'
-            className='bg-indigo-400 sm:col-span-1 my-3 sm:my-0 sm:mx-auto'
+            url='https://discord.com/invite/Btg5hqCA'
+            className='bg-blue-500 sm:col-span-1 my-3 sm:my-0 sm:mx-auto'
           />
           <SocialMediaButton
             title='X'
