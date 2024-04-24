@@ -57,7 +57,7 @@ const Home = () => {
             description='runfunrun'
             icon='/discord.png'
             url='https://discord.com/invite/Btg5hqCA'
-            className='bg-blue-500 sm:col-span-1 my-3 sm:my-0 sm:mx-auto'
+            className='bg-indigo-400 sm:col-span-1 my-3 sm:my-0 sm:mx-auto'
           />
           <SocialMediaButton
             title='X'
