@@ -4,10 +4,18 @@ import { Button } from '@nextui-org/react';
 import { Archivo_Black } from 'next/font/google';
 import Link from 'next/link';
 import { redirect, useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
 const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
 
-const Result = ({ success }: { success: boolean }) => {
+const Result = () => {
+  const searchParams = useSearchParams();
+  const success = searchParams.get('success') as string | undefined;
+
+  if (success === undefined) {
+    redirect('/');
+  }
+
   if (success) {
     return (
       <>
@@ -38,16 +46,11 @@ const Result = ({ success }: { success: boolean }) => {
 };
 
 const Home = () => {
-  const searchParams = useSearchParams();
-  const success = searchParams.get('success') as string | undefined;
-
-  if (success === undefined) {
-    redirect('/');
-  }
-
   return (
     <main>
-      <Result success={success === 'true'} />
+      <Suspense>
+        <Result />
+      </Suspense>
       <Link href='/'>
         <Button
           color='secondary'
