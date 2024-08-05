@@ -34,7 +34,7 @@ export const NavBar = () => {
     },
     {
       title: 'Blog',
-      url: 'https://www.runfunrun.tech',
+      url: 'https://www.runfunrun.dev',
       className: '',
       blank: true,
     },
