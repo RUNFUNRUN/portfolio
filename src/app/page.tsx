@@ -1,99 +1,101 @@
-import { Avatar } from '@nextui-org/react';
-import { Archivo_Black } from 'next/font/google';
-import Link from 'next/link';
-import { CopyButton } from './_components/copy-button';
-import { SocialMediaButton } from './_components/socialmedia-button';
-import { WorkCard } from './_components/work-card';
+import Image from "next/image";
 
-const archivoBlack = Archivo_Black({ weight: ['400'], subsets: ['latin'] });
-
-const Home = () => {
+export default function Home() {
   return (
-    <main>
-      <h1
-        className={`text-4xl sm:text-5xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-blue-500 to-indigo-500 ${archivoBlack.className}`}
-      >
-        Hi! I&apos;m RUNFUNRUN
-      </h1>
-      <div className='sm:grid sm:grid-cols-3 lg:grid-cols-4 my-6 sm:my-12 lg:my-20 mx-auto sm:w-5/6 lg:w-4/5'>
-        <div className='w-1/2 sm:w-auto sm:col-span-1 mx-auto my-auto'>
-          <Avatar src='miwa_icon.jpeg' className='w-auto h-auto text-large' />
-        </div>
-        <div className='text-left text-lg sm:col-span-2 lg:col-span-3 sm:text-2xl lg:text-4xl my-6 sm:m-10 lg:m-16'>
-          <p>Hello. I&apos;m Ryota Uchiyama a.k.a RUNFUNRUN.</p>
-          <p>
-            I&apos;m a software developer in Japan. I&apos;m also a FPS gamer. I
-            like VALORANT.
-          </p>
-          <p>This icon is my favorite singer &quot;miwa&quot;.</p>
-          <p>
-            If you have any questions, please contact me on Discord or{' '}
-            <Link
-              href='/contact'
-              className='text-blue-500 hover:underline hover:text-blue-400'
-            >
-              this form
-            </Link>
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+        <Image
+          className="dark:invert"
+          src="/next.svg"
+          alt="Next.js logo"
+          width={180}
+          height={38}
+          priority
+        />
+        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+          <li className="mb-2">
+            Get started by editing{" "}
+            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
+              src/app/page.tsx
+            </code>
             .
-          </p>
-        </div>
-      </div>
-      <div className='my-6 sm:my-12 lg:my-20'>
-        <h2
-          className={`text-3xl sm:text-4xl lg:text-5xl sm:my-6 lg:my-10 ${archivoBlack.className}`}
-        >
-          Social Media
-        </h2>
-        <div className='sm:w-2/3 xl:w-2/5 sm:mx-auto sm:grid sm:grid-cols-4'>
-          <SocialMediaButton
-            title='GitHub'
-            description='RUNFUNRUN'
-            icon='/github.png'
-            url='https://github.com/RUNFUNRUN'
-            className='bg-gray-800 sm:col-span-1 my-3 sm:my-0 sm:mx-auto'
-          />
-          <CopyButton
-            title='Discord'
-            description='runfunrun'
-            icon='/discord.png'
-            text='runfunrun'
-            message='Discord ID is Copied!'
-            className='bg-indigo-400 sm:col-span-1 my-3 sm:my-0 sm:mx-auto'
-          />
-          <SocialMediaButton
-            title='X'
-            description='@GRAPH_fps'
-            icon='/x.png'
-            url='https://x.com/GRAPH_fps'
-            className='bg-blue-500 sm:col-span-1 my-3 sm:my-0 sm:mx-auto'
-          />
-          <SocialMediaButton
-            title='Instagram'
-            description='@ryota_uchiyama'
-            icon='/instagram.png'
-            url='https://www.instagram.com/ryota_uchiyama'
-            className='bg-pink-300 sm:col-span-1 my-3 sm:my-0 sm:mx-auto'
-          />
-        </div>
-      </div>
-      <div className='my-6 sm:my-12 lg:my-20'>
-        <h2
-          className={`text-3xl sm:text-4xl lg:text-5xl my-3 sm:my-6 lg:my-10 ${archivoBlack.className}`}
-        >
-          My works
-        </h2>
-        <div>
-          <WorkCard
-            title='VALORANT Oekaki Chat'
-            description='VALORANT ASCII art generator | "Oekaki" means "drawing" in Japanese.'
-            image='https://www.valorant-oekaki-chat.net/og.png'
-            url='https://www.valorant-oekaki-chat.net'
-            github='https://github.com/RUNFUNRUN/VALORANT-Oekaki-Chat'
-          />
-        </div>
-      </div>
-    </main>
-  );
-};
+          </li>
+          <li>Save and see your changes instantly.</li>
+        </ol>
 
-export default Home;
+        <div className="flex gap-4 items-center flex-col sm:flex-row">
+          <a
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className="dark:invert"
+              src="/vercel.svg"
+              alt="Vercel logomark"
+              width={20}
+              height={20}
+            />
+            Deploy now
+          </a>
+          <a
+            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
+            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read our docs
+          </a>
+        </div>
+      </main>
+      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/file.svg"
+            alt="File icon"
+            width={16}
+            height={16}
+          />
+          Learn
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/window.svg"
+            alt="Window icon"
+            width={16}
+            height={16}
+          />
+          Examples
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/globe.svg"
+            alt="Globe icon"
+            width={16}
+            height={16}
+          />
+          Go to nextjs.org →
+        </a>
+      </footer>
+    </div>
+  );
+}
