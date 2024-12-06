@@ -34,6 +34,7 @@ const Home = () => {
               Please check the settings here.{' '}
               <Link
                 href='https://github.com/RUNFUNRUN/LazyVim'
+                target='_blank'
                 className='underline'
               >
                 https://github.com/RUNFUNRUN/LazyVim
