@@ -35,7 +35,7 @@ const RootLayout = ({
 export default RootLayout;
 
 const title = 'RUNFUNRUN';
-const description = 'My portfolio';
+const description = 'This is my portfolio';
 
 export const metadata: Metadata = {
   metadataBase: new URL(
