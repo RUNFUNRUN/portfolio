@@ -1,21 +1,32 @@
+import { ThemeProvider } from '@/components/theme-provider';
+import { cn } from '@/lib/utils';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
+import { Source_Code_Pro } from 'next/font/google';
+import type { ReactNode } from 'react';
 import './globals.css';
-import { Providers } from './providers';
+import { Toaster } from '@/components/ui/sonner';
 
-const roboto = Roboto({ weight: '400', subsets: ['latin'] });
+const sourceCodePro = Source_Code_Pro({ weight: '300', subsets: ['latin'] });
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+const RootLayout = ({
+  children,
+  modal,
+}: Readonly<{
+  children: ReactNode;
+  modal: ReactNode;
+}>) => {
   return (
-    <html lang='en' className='dark'>
+    <html lang='en'>
       {process.env.NODE_ENV === 'production' && (
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ''} />
       )}
-      <SpeedInsights />
-      <body className={roboto.className}>
-        <Providers>{children}</Providers>
+      <body className={cn('flex min-h-dvh flex-col', sourceCodePro.className)}>
+        <ThemeProvider attribute='class' defaultTheme='dark'>
+          {children}
+          {modal}
+          <Toaster richColors />
+        </ThemeProvider>
       </body>
     </html>
   );
@@ -23,16 +34,22 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 
 export default RootLayout;
 
+const title = 'RUNFUNRUN';
+const description = 'My portfolio';
+
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
   ),
-  title: 'RUNFUNRUN.info',
-  description: 'This is my portfolio site.',
+  title,
+  description,
   openGraph: {
-    images: '/miwa.jpeg',
+    title,
+    description,
+    url: '/',
   },
   twitter: {
-    images: '/miwa.jpeg',
+    title,
+    description,
   },
 };
