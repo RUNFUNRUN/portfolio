@@ -4,6 +4,11 @@ export const runtime = 'edge';
 
 export const contentType = 'image/png';
 
+export const size = {
+  width: 1200,
+  height: 630,
+};
+
 export default async function Image() {
   const sourceCodePro = fetch(
     new URL('./SourceCodePro-Light.ttf', process.env.NEXT_PUBLIC_SITE_URL),
@@ -33,8 +38,7 @@ export default async function Image() {
       </p>
     </div>,
     {
-      width: 1200,
-      height: 630,
+      ...size,
       fonts: [
         {
           name: 'Source_Code_Pro',
