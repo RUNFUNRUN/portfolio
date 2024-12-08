@@ -16,8 +16,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 
-export const runtime = 'edge';
-
 const Page = () => {
   const router = useRouter();
 

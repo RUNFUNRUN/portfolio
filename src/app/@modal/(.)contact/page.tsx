@@ -16,8 +16,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 
-export const runtime = 'edge';
-
 const Page = () => {
   const router = useRouter();
 

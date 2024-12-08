@@ -8,8 +8,6 @@ import {
 } from '@/components/ui/accordion';
 import Link from 'next/link';
 
-export const runtime = 'edge';
-
 const Home = () => {
   return (
     <div className='px-4 sm:px-0 space-y-4'>
