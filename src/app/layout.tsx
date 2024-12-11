@@ -1,11 +1,11 @@
 import { ThemeProvider } from '@/components/theme-provider';
+import { Toaster } from '@/components/ui/sonner';
 import { cn } from '@/lib/utils';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { Source_Code_Pro } from 'next/font/google';
 import type { ReactNode } from 'react';
 import './globals.css';
-import { Toaster } from '@/components/ui/sonner';
 
 const sourceCodePro = Source_Code_Pro({ weight: '300', subsets: ['latin'] });
 
