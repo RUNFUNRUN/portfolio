@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
 const Home = () => {
@@ -48,3 +49,14 @@ const Home = () => {
 };
 
 export default Home;
+
+export const generateMetadata = () => {
+  return {
+    openGraph: {
+      url: '/',
+    },
+    alternates: {
+      canonical: '/',
+    },
+  } satisfies Metadata;
+};

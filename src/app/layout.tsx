@@ -46,7 +46,6 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    url: '/',
   },
   twitter: {
     title,
