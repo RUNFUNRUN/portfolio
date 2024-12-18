@@ -52,9 +52,6 @@ export default Home;
 
 export const generateMetadata = () => {
   return {
-    openGraph: {
-      url: '/',
-    },
     alternates: {
       canonical: '/',
     },
