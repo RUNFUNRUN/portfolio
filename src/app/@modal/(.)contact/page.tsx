@@ -14,10 +14,12 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import { toast } from 'sonner';
 
 const Page = () => {
   const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const formAction = async (formData: FormData) => {
     const result = await discordWebhook(formData);
@@ -39,7 +41,7 @@ const Page = () => {
             <br /> If not, it’s not required.
           </DialogDescription>
         </DialogHeader>
-        <form action={formAction}>
+        <form action={formAction} onSubmit={() => setIsSubmitting(true)}>
           <div className='grid gap-4'>
             <div className='space-y-1'>
               <Label htmlFor='name'>
@@ -61,7 +63,7 @@ const Page = () => {
             </div>
           </div>
           <DialogFooter className='mt-6'>
-            <Button type='submit' className='sm:w-28'>
+            <Button type='submit' className='sm:w-28' disabled={isSubmitting}>
               Submit
             </Button>
           </DialogFooter>
