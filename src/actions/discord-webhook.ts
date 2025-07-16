@@ -7,7 +7,7 @@ const schema = z.object({
   email: z.preprocess(
     (value) =>
       typeof value === 'string' && value.trim() === '' ? undefined : value,
-    z.string().email().optional(),
+    z.email().optional(),
   ),
   content: z.string(),
 });
@@ -42,7 +42,7 @@ export const discordWebhook = async (formData: FormData) => {
     if (!result.ok) throw new Error('The request failed');
   } catch (err) {
     if (err instanceof z.ZodError) {
-      console.error('Zod validtion error:', err.errors);
+      console.error('Zod validtion error:', err.message);
     } else if (err instanceof Error) {
       console.error('Error:', err.message);
     } else {
