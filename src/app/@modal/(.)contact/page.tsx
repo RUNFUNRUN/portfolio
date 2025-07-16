@@ -1,5 +1,8 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import { toast } from 'sonner';
 import { discordWebhook } from '@/actions/discord-webhook';
 import { InterceptDialog } from '@/components/intercept-dialog';
 import { Button } from '@/components/ui/button';
@@ -13,9 +16,6 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
-import { toast } from 'sonner';
 
 const Page = () => {
   const router = useRouter();

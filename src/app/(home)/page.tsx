@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
 import { LinkWithUnderline } from '@/components/link-with-underline';
 import { SocialMediaButtons } from '@/components/social-media-buttons';
 import {
@@ -6,8 +8,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import type { Metadata } from 'next';
-import Link from 'next/link';
 
 const Home = () => {
   return (
@@ -50,10 +50,10 @@ const Home = () => {
 
 export default Home;
 
-export const generateMetadata = () => {
+export const generateMetadata = (): Metadata => {
   return {
     alternates: {
       canonical: '/',
     },
-  } satisfies Metadata;
+  };
 };

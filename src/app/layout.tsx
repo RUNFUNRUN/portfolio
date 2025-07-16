@@ -1,9 +1,9 @@
-import { ThemeProvider } from '@/components/theme-provider';
-import { Toaster } from '@/components/ui/sonner';
-import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import { Source_Code_Pro } from 'next/font/google';
 import type { ReactNode } from 'react';
+import { ThemeProvider } from '@/components/theme-provider';
+import { Toaster } from '@/components/ui/sonner';
+import { cn } from '@/lib/utils';
 import './globals.css';
 
 const sourceCodePro = Source_Code_Pro({ weight: '300', subsets: ['latin'] });

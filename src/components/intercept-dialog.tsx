@@ -1,8 +1,8 @@
 'use client';
 
-import { Dialog } from '@/components/ui/dialog';
 import { useRouter } from 'next/navigation';
 import type { ReactNode } from 'react';
+import { Dialog } from '@/components/ui/dialog';
 
 export const InterceptDialog = ({
   children,
