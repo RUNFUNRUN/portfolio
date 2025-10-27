@@ -39,7 +39,10 @@ const Home = () => {
                 https://github.com/RUNFUNRUN/LazyVim
               </Link>
             </p>
-            <p>Also, I enjoy playing video games. I mainly play Valorant.</p>
+            <p>
+              Also, I love cars and driving. I own a BMW F22 M235i. I absolutely
+              love BMW. Being Japanese, I naturally love JDM culture too.
+            </p>
           </AccordionContent>
         </AccordionItem>
       </Accordion>
