@@ -9,7 +9,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-const Home = () => {
+const Page = () => {
   return (
     <div className='px-4 sm:px-0 space-y-4'>
       <h1 className='text-center text-3xl sm:text-5xl'>
@@ -51,7 +51,7 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Page;
 
 export const generateMetadata = (): Metadata => {
   return {

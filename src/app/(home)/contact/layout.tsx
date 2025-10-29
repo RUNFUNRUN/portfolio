@@ -1,11 +1,6 @@
 import type { Metadata } from 'next';
-import type { ReactNode } from 'react';
 
-const Layout = ({
-  children,
-}: Readonly<{
-  children: ReactNode;
-}>) => {
+const Layout = ({ children }: LayoutProps<'/contact'>) => {
   return <>{children}</>;
 };
 

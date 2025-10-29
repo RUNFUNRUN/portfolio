@@ -9,7 +9,7 @@ export const size = {
   height: 630,
 };
 
-export default async function Image() {
+const Image = async () => {
   const sourceCodePro = fetch(
     new URL('./SourceCodePro-Light.ttf', process.env.NEXT_PUBLIC_SITE_URL),
   ).then((res) => res.arrayBuffer());
@@ -47,4 +47,6 @@ export default async function Image() {
       ],
     },
   );
-}
+};
+
+export default Image;

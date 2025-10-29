@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Source_Code_Pro } from 'next/font/google';
-import type { ReactNode } from 'react';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
 import { cn } from '@/lib/utils';
@@ -8,13 +7,7 @@ import './globals.css';
 
 const sourceCodePro = Source_Code_Pro({ weight: '300', subsets: ['latin'] });
 
-const RootLayout = ({
-  children,
-  modal,
-}: Readonly<{
-  children: ReactNode;
-  modal: ReactNode;
-}>) => {
+const Layout = ({ children, modal }: LayoutProps<'/'>) => {
   return (
     <html lang='en'>
       <body className={cn('flex min-h-dvh flex-col', sourceCodePro.className)}>
@@ -28,7 +21,7 @@ const RootLayout = ({
   );
 };
 
-export default RootLayout;
+export default Layout;
 
 const title = 'RUNFUNRUN';
 const description = 'This is my portfolio';
