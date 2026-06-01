@@ -40,8 +40,9 @@ const Page = () => {
               </Link>
             </p>
             <p>
-              Also, I love cars and driving. I own a BMW F22 M235i. I absolutely
-              love BMW. Being Japanese, I naturally love JDM culture too.
+              Also, I love cars and driving. I own a BMW F87 M2 Competiton. I
+              absolutely love BMW. Being Japanese, I naturally love JDM culture
+              too.
             </p>
           </AccordionContent>
         </AccordionItem>
