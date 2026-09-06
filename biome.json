@@ -8,7 +8,7 @@
     }
   },
   "files": {
-    "includes": ["**", "!**/node_modules", "!**/.next"]
+    "includes": ["**", "!**/node_modules", "!**/.next", "!**/*.svg"]
   },
   "formatter": {
     "enabled": true,
@@ -27,7 +27,7 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "preset": "recommended"
     }
   },
   "css": {
